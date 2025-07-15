@@ -1,0 +1,15 @@
+-- 5.1. створення функції
+
+DROP FUNCTION IF EXISTS divide_values;
+
+DELIMITER //
+
+CREATE FUNCTION divide_values(a FLOAT, b FLOAT)
+RETURNS FLOAT
+DETERMINISTIC
+BEGIN
+    RETURN a / b;
+END;
+//
+
+DELIMITER ;
